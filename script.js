@@ -113,6 +113,22 @@ Task:
    in each block so you can see the flow of control.
 */
 
+function firstItem(arr) {
+   if (!Array.isArray(arr) || arr.length === 0) {
+       throw new Error("Array must be non-empty.");
+   }
+   return arr[0];
+}
+
+try {
+   const x = firstItem([]);
+   console.log("First item:", x);
+} catch (e) {
+   console.error("error:", e.message);
+} finally {
+   console.log("Finally block");
+}
+
 // ===================================================================================
 // TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
 // ===================================================================================
